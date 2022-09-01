@@ -20,6 +20,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        cache-path: ./frontend/node-lock.js
     - run: npm ci
       working-directory: frontend
     - run: npm test
@@ -28,17 +29,6 @@ jobs:
   cypress-run:
     runs-on: ubuntu-20.04
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        cache-dependency-path: "./frontend/package-lock.json"
-    - run: npm ci
-      working-directory: frontend
-    - run: npm start&
-      working-directory: frontend
     - name: Checkout
       uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
