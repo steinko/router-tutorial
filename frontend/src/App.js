@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Outlet,Link } from "react-router-dom";
 import ErrorBoundary from "./ErrorBoundary"
 
 function App() {
@@ -20,6 +20,7 @@ function App() {
         </ErrorBoundary>
 
       </nav>
+        <Outlet />
     </div>
   );
 }

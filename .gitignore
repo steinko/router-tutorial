@@ -2,9 +2,8 @@
 
 # dependencies
 /frontend/node_modules
-/acceptanceTest/node_modules
-
+/acceptanceTests/node_modules
 
 # production
 /frontend/buil
-/acceptanceTest/build
+//acceptanceTests/build

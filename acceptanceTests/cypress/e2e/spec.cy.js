@@ -19,7 +19,9 @@ it('Bookeeper page should cotain Expences', () => {
 it('Invoice page should cotain Invoices', () => {
     cy.visit('http://localhost:3000')
     cy.contains("Invoices").click()
-    cy.contains("Invoices")
+    cy.contains("Santa Monica")
+    cy.contains("Stankonia")
+
   })
 
 it('Expence page should cotain Expences', () => {
