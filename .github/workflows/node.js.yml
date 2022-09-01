@@ -49,6 +49,6 @@ jobs:
         working-directory: acceptanceTests
         env: true
       env:
-        CYPRESS_BASIC_URL: http://localhost:3000
+        CYPRESS_BASE_URL: http://localhost:3000
       
          
