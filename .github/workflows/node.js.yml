@@ -47,4 +47,8 @@ jobs:
       uses: cypress-io/github-action@v4
       with:
         working-directory: acceptanceTests
+        env: true
+      env:
+        CYPRESS_BASIC_URL: http://localhost:3000
+      
          
