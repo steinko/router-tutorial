@@ -44,6 +44,6 @@ jobs:
       # and run all Cypress tests
     - name: Cypress run
       uses: cypress-io/github-action@v4
-          with:
-            working-directory: acceptanceTest
+      with:
+        working-directory: acceptanceTest
          
