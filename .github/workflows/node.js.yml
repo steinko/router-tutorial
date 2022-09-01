@@ -48,6 +48,8 @@ jobs:
       with:
         working-directory: acceptanceTests
         env: true
+        project: frontend
+        start: npm start
       env:
         CYPRESS_BASE_URL: http://localhost:3000
       
