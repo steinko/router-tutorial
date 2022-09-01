@@ -28,18 +28,23 @@ jobs:
     
   cypress-run:
     runs-on: ubuntu-20.04
+    
     steps:
     - name: Checkout
       uses: actions/checkout@v2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
+    - name: Install root dependencies
+      uses: bahmutov/npm-install@v1
+    - name: change directory  
+      run: cd frontend
+    - name: Start server in the background
+      run: npm start &
     - name: Cypress run
       uses: cypress-io/github-action@v4
       with:
         working-directory: acceptanceTests
         env: true
-        run: cd frontend
-        start: npm start
       env:
         CYPRESS_BASE_URL: http://localhost:3000
       
