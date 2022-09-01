@@ -10,10 +10,12 @@ import {
 import reportWebVitals from './reportWebVitals';
 import Expenses from "./routes/expenses";
 import Invoices from "./routes/invoices";
+import ErrorBoundary from './ErrorBoundary';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
+    <ErrorBoundary>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
@@ -21,6 +23,7 @@ root.render(
         <Route path="invoices" element={<Invoices />} />
       </Routes>
     </BrowserRouter>
+     </ErrorBoundary>
   </React.StrictMode>  
 );
 
