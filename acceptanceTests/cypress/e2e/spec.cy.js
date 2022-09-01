@@ -30,4 +30,9 @@ it('Expence page should cotain Expences', () => {
     cy.contains("Expenses")
   })
 
+it('Expence page should cotain Expences', () => {
+    cy.visit('http://localhost:3000/hjk')
+    cy.contains("There's nothing here!")
+  })
+
 })
